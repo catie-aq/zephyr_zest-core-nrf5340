@@ -1,0 +1,14 @@
+identifier: zest_core_nrf5340_nrf5340_cpunet
+name: ZEST_CORE_NRF5340-NRF5340-network-MCU
+type: mcu
+arch: arm
+toolchain:
+  - gnuarmemb
+  - xtools
+  - zephyr
+ram: 64
+flash: 256
+supported:
+  - watchdog
+  - gpio
+vendor: nordic
