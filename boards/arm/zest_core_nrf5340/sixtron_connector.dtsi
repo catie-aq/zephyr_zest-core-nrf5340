@@ -1,0 +1,60 @@
+/*
+ * Copyright (c) 2024 CATIE
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+#include <zephyr/dt-bindings/gpio/sixtron-header.h>
+
+/ {
+    sixtron_connector_1: sixtron_connector_1 {
+        compatible = "sixtron-bus";
+        #gpio-cells = <2>;
+        gpio-map-mask = <0xffffffff 0xffffffc0>;
+        gpio-map-pass-thru = <0 0x3f>;
+        gpio-map = <I2C_SCL 0 &gpio1 3 0>,
+                   <I2C_SDA 0 &gpio1 2 0>,
+                   <UART_RX 0 &gpio0 13 0>,
+                   <UART_TX 0 &gpio0 14 0>,
+                   <SPI_MOSI 0 &gpio0 15 0>,
+                   <SPI_MISO 0 &gpio0 16 0>,
+                   <SPI_SCK 0 &gpio0 17 0>,
+                   <SPI_SS 0 &gpio0 18 0>,
+                   <PWM1 0 &gpio0 19 0>,
+                   <PWM2 0 &gpio0 20 0>,
+                   <PWM3 0 &gpio0 21 0>,
+                   <ICAP 0 &gpio0 22 0>,
+                   <WKUP 0 &gpio0 23 0>,
+                   <DIO1 0 &gpio0 24 0>,
+                   <DIO2 0 &gpio0 25 0>,
+                   <DIO3 0 &gpio0 26 0>,
+                   <DIO4 0 &gpio0 27 0>,
+                   <ADC1 0 &gpio0 4 0>,
+                   <ADC2 0 &gpio0 5 0>,
+                   <ADC3 0 &gpio0 6 0>,
+                   <ADC4 0 &gpio0 7 0>,
+                   <DIO5 0 &gpio0 28 0>,
+                   <DIO6 0 &gpio0 29 0>,
+                   <DIO7 0 &gpio0 30 0>,
+                   <DIO8 0 &gpio0 31 0>,
+                   <DIO9 0 &gpio1 0 0>,
+                   <DIO10 0 &gpio1 1 0>,
+                   <DIO11 0 &gpio1 4 0>,
+                   <DIO12 0 &gpio1 5 0>,
+                   <DIO13 0 &gpio1 6 0>,
+                   <DIO14 0 &gpio1 7 0>,
+                   <DIO15 0 &gpio1 8 0>,
+                   <DIO16 0 &gpio1 9 0>,
+                   <DIO17 0 &gpio1 10 0>,
+                   <DIO18 0 &gpio1 11 0>;
+    };
+};
+
+sixtron_connector_1_i2c: &i2c1 {};
+sixtron_connector_1_uart: &uart1 {};
+sixtron_connector_1_spi: &spi4 {};
+
+sixtron_i2c: &sixtron_connector_1_i2c {};
+sixtron_uart: &sixtron_connector_1_uart {};
+sixtron_spi: &sixtron_connector_1_spi {};
+
+sixtron_connector: &sixtron_connector_1 {};
