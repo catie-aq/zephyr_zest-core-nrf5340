@@ -1,0 +1,8 @@
+board:
+  name: zest_core_nrf5340
+  vendor: catie
+  socs:
+    - name: 'nrf5340'
+      variants:
+        - name: 'ns'
+          cpucluster: 'cpuapp'
