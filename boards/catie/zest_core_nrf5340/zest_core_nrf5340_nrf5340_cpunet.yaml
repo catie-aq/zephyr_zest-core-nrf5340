@@ -1,4 +1,4 @@
-identifier: zest_core_nrf5340_nrf5340_cpunet
+identifier: zest_core_nrf5340/nrf5340/cpunet
 name: ZEST_CORE_NRF5340-NRF5340-network-MCU
 type: mcu
 arch: arm

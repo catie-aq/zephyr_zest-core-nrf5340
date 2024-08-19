@@ -1,15 +1,17 @@
-identifier: zest_core_nrf5340_nrf5340_cpuapp_ns
-name: ZEST_CORE_NRF5340-NRF5340-application-MCU-Non-Secure
+identifier: zest_core_nrf5340/nrf5340/cpuapp
+name: ZEST_CORE_NRF5340-NRF5340-application-MCU
 type: mcu
 arch: arm
 toolchain:
   - gnuarmemb
   - xtools
   - zephyr
-ram: 192
-flash: 192
+ram: 448
+flash: 1024
 supported:
+  - gpio
   - i2c
+  - i2s
   - pwm
   - watchdog
   - usb_cdc
