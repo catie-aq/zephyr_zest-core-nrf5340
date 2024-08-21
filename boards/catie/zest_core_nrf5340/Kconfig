@@ -38,7 +38,7 @@ config BOARD_ENABLE_CPUNET
 
 config DOMAIN_CPUNET_BOARD
 	string
-	default "zest_core_nrf5340_nrf5340_cpunet"
+	default "zest_core_nrf5340/nrf5340/cpunet"
 	depends on BOARD_ENABLE_CPUNET
 	help
 	  The board which will be used for CPUNET domain when creating a multi
@@ -50,7 +50,7 @@ endif #  BOARD_ZEST_CORE_NRF5340_NRF5340_CPUAPP || BOARD_ZEST_CORE_NRF5340_NRF53
 
 config DOMAIN_CPUAPP_BOARD
 	string
-	default "zest_core_nrf5340_nrf5340_cpuapp"
+	default "zest_core_nrf5340/nrf5340/cpuapp"
 	depends on BOARD_ZEST_CORE_NRF5340_NRF5340_CPUNET
 	help
 	  The board which will be used for CPUAPP domain when creating a multi
