@@ -1,0 +1,17 @@
+name: "Zephyr Zest_Core_nRF5340 CI/CD"
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  board:
+    strategy:
+        matrix:
+          board: [ "zest_core_nrf5340/nrf5340/cpunet", "zest_core_nrf5340/nrf5340/cpuapp" ]
+    uses: catie-aq/zephyr_workflows/.github/workflows/board.yml@main
+    with:
+      board: ${{ matrix.board }}
+
+    secrets:
+      personal_access_token: ${{ secrets.CI_6TRON_ZEPHYR_RO }}
