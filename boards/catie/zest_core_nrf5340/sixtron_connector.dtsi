@@ -22,7 +22,7 @@
                    <PWM1 0 &gpio0 19 0>,
                    <PWM2 0 &gpio0 20 0>,
                    <PWM3 0 &gpio0 21 0>,
-                   <ICAP 0 &gpio0 22 0>,
+                   <ICAPT 0 &gpio0 22 0>,
                    <WKUP 0 &gpio0 23 0>,
                    <DIO1 0 &gpio0 24 0>,
                    <DIO2 0 &gpio0 25 0>,
