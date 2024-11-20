@@ -59,7 +59,7 @@
     };
 };
 
-sixtron_connector_1_i2c: &i2c1 {};
+sixtron_connector_1_i2c: &i2c2 {};
 sixtron_connector_1_uart: &uart1 {};
 sixtron_connector_1_spi: &spi4 {};
 
