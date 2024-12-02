@@ -57,6 +57,15 @@
                   <PWM2 0 0 &pwm1 0 0 0>,
                   <PWM3 0 0 &pwm2 0 0 0>;
     };
+
+    sixtron_connector_1_adc: sixtron-connector-1-adc {
+        compatible = "sixtron-adc";
+        #io-channel-cells = <1>;
+        io-channel-map = <ADC1 &adc 0>,
+                         <ADC2 &adc 1>,
+                         <ADC3 &adc 2>,
+                         <ADC4 &adc 3>;
+    };
 };
 
 sixtron_connector_1_i2c: &i2c2 {};
@@ -67,5 +76,6 @@ sixtron_i2c: &sixtron_connector_1_i2c {};
 sixtron_uart: &sixtron_connector_1_uart {};
 sixtron_spi: &sixtron_connector_1_spi {};
 sixtron_pwm: &sixtron_connector_1_pwm {};
+sixtron_adc: &sixtron_connector_1_adc {};
 
 sixtron_connector: &sixtron_connector_1 {};
