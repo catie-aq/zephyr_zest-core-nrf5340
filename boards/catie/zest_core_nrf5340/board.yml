@@ -1,5 +1,6 @@
 board:
   name: zest_core_nrf5340
+  full_name: Zest_Core_nRF5340
   vendor: catie
   socs:
     - name: 'nrf5340'
