@@ -11,7 +11,7 @@ jobs:
   board:
     strategy:
         matrix:
-          board: [ "zest_core_nrf5340/nrf5340/cpunet", "zest_core_nrf5340/nrf5340/cpuapp" ]
+          board: [ "zest_core_nrf5340/nrf5340/cpunet", "zest_core_nrf5340/nrf5340/cpuapp", "zest_core_nrf5340/nrf5340/cpuapp/ns" ]
     uses: catie-aq/zephyr_workflows/.github/workflows/board.yml@main
     with:
       board: ${{ matrix.board }}
